@@ -36,6 +36,8 @@ export default {
       autocompleteItems: [{
         text: 'Spain',
       }, {
+          text: 'Spaintwo',
+      }, {
         text: 'France',
       }, {
         text: 'USA',

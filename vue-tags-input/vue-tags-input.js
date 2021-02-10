@@ -54,10 +54,11 @@ export default {
       else if (method === 'after' && selectedItem === lastItem) return 0;
       else return method === 'after' ? selectedItem + 1 : selectedItem - 1;
     },
-    selectDefaultItem() {
+    selectDefaultItem(e) {
       if (this.addOnlyFromAutocomplete && this.filteredAutocompleteItems.length > 0) {
         this.selectedItem = 0;
-      } else this.selectedItem = null;
+        this.selectItem(e, 'before');
+      } else this.selectedItem = 0;
     },
     selectItem(e, method) {
       e.preventDefault();
@@ -373,6 +374,7 @@ export default {
     value(newValue){
       // If v-model change outside, update the newTag model
       if (!this.addOnlyFromAutocomplete) this.selectedItem = null;
+      this.selectedItem = 0;
       this.newTag = newValue;
     },
     tags: {

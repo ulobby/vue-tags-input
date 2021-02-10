@@ -1,4 +1,6 @@
-# vue-tags-input
+# vue-tags-input - Ulobby edition
+
+I forked this and made a change so that the first item in the autocomplete list is always selected at first.
 
 A tags input component for VueJS with autocompletion, custom validation, templating and much more
 
